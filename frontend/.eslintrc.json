@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "ignorePatterns": ["node_modules/*", "build/*", "dist/*"],
+  "plugins": [
+    "import",
+    "simple-import-sort",
+    "react",
+    "@typescript-eslint/eslint-plugin",
+    "react-hooks"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:react-hooks/recommended"],
+      "rules": {
+        "import/first": "warn",
+        "import/no-cycle": "warn",
+        "import/no-duplicates": "error",
+        "import/newline-after-import": "warn",
+        "simple-import-sort/imports": [
+          "warn",
+          {
+            "groups": [["^react"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]]
+          }
+        ],
+        "simple-import-sort/exports": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-use-before-define": "warn",
+        "@typescript-eslint/no-explicit-any": "warn",
+        "@typescript-eslint/ban-types": "warn",
+        "@typescript-eslint/no-empty-function": "warn",
+        "@next/image-component": "off",
+        "@next/next/no-img-element": "off",
+        "jsx-a11y/alt-text": [0],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "react/jsx-no-target-blank": "off",
+        "no-case-declarations": "off",
+        "@typescript-eslint/no-extra-semi": "off",
+        "prefer-const": [
+          "warn",
+          {
+            "destructuring": "any",
+            "ignoreReadBeforeAssign": false
+          }
+        ]
+      }
+    },
+
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": [],
+      "rules": {}
+    }
+  ]
+}

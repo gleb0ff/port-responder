@@ -1,0 +1,73 @@
+html,
+body {
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+#root{
+    height: 100vh;
+}
+
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #6c757d;
+    opacity: 0.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p {
+    padding: 0;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+textarea {
+    outline: none;
+}
+
+
+
